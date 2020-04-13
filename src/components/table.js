@@ -18,8 +18,8 @@ const SortCell = ({ children, order, setOrder, field }) => {
     setOrder([field, active ? !desc : false]);
   };
   const iconClasses = classnames({
-    icon: true,
-    'icon-arrow-up': !active || !desc,
+    icon: active,
+    'icon-arrow-up': active && !desc,
     'icon-arrow-down': active && desc,
   });
   return (
@@ -115,7 +115,7 @@ const Row = ({
 }) => (
   <tr className={className}>
     <td>{name}</td>
-    <td className="text-center">{level}</td>
+    <td>{level}</td>
     <td className="text-break">
       {ingredients.map((ingredient, i) => (
         <FilterChip

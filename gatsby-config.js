@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/rf4-tools',
   siteMetadata: {
     title: `RF4 Quick References`,
     description: `RF4 Quick References`,
